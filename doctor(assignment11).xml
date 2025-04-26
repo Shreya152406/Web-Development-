@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="Ass.css"?>
+
+<hospital>
+    <doctor>
+        <id>301</id>
+        <name>Dr. Neha Kulkarni</name>
+        <specialization>Cardiologist</specialization>
+        <department>Heart Care</department>
+        <experience>10 Years</experience>
+    </doctor>
+    <doctor>
+        <id>302</id>
+        <name>Dr. Vivek Sharma</name>
+        <specialization>Neurologist</specialization>
+        <department>Neuroscience</department>
+        <experience>8 Years</experience>
+    </doctor>
+    <doctor>
+        <id>303</id>
+        <name>Dr. Anjali Mehta</name>
+        <specialization>Pediatrician</specialization>
+        <department>Child Care</department>
+        <experience>6 Years</experience>
+    </doctor>
+</hospital>
