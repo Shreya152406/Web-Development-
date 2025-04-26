@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="exp12.xsl"?>
+<catalog>
+	<cd>
+		<player>
+			Shaikh Rasheed
+		</player>
+		<role>
+			Batsman
+		</role>
+	</cd>
+	<cd>
+		<player>
+			Ayush Mhatre
+		</player>
+		<role>
+			Batsman
+		</role>
+	</cd>
+	<cd>
+		<player>
+			Shivam Dube
+		</player>
+		<role>
+			Batsman
+		</role>
+	</cd>
+	<cd>
+		<player>
+			Deepak Hooda
+		</player>
+		<role>
+			Batsman
+		</role>
+	</cd>
+	<cd>
+		<player>
+			Sam Curran
+		</player>
+		<role>
+			All Rounder
+		</role>
+	</cd>
+	<cd>
+		<player>
+			Ravindra Jadeja
+		</player>
+		<role>
+			All Rounder
+		</role>
+	</cd>
+	<cd>
+		<player>
+			M.S.Dhoni
+		</player>
+		<role>
+			Wicketkeeper
+		</role>
+	</cd>
+	<cd>
+		<player>
+			Noor Ahmed
+		</player>
+		<role>
+			Bowler
+		</role>
+	</cd>
+	<cd>
+		<player>
+			Matheesha Pathriana
+		</player>
+		<role>
+			Bowler
+		</role>
+	</cd>
+	<cd>
+		<player>
+			Khaleel Ahmed
+		</player>
+		<role>
+			Bowler
+		</role>
+	</cd>
+	<cd>
+		<player>
+			A.Kumbhoj
+		</player>
+		<role>
+			Bowler
+		</role>
+	</cd>
+</catalog>
