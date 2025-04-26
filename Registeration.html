@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment 9</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f3e5f5, #e1f5fe);
+      color: #263568;
+    }
+
+    h1, h2, h4 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 25px 30px;
+      background-color: #ffffffcc;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 15px 20px;
+      align-items: center;
+    }
+
+    label {
+      font-weight: bold;
+      text-align: right;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #90a4ae;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .full-width {
+      grid-column: span 2;
+    }
+
+    button {
+      background: linear-gradient(to right, #26c6da, #7e57c2);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      width: 100%;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #00acc1, #5c6bc0);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Assignment 9</h1>
+  <h2>Q. Create an Employee Registration Form</h2>
+  <h4>Name: Shreya Sunil Joshi</h4>
+  <h4>Roll No: 142</h4>
+
+  <form action="/submit-registration" method="post">
+    <label for="Fname">First Name:</label>
+    <input type="text" id="Fname" name="firstname" required>
+
+    <label for="Lname">Last Name:</label>
+    <input type="text" id="Lname" name="lastname" required>
+
+    <label for="gender">Gender:</label>
+    <select name="gender" id="gender" required>
+      <option value="">Select Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phoneno" pattern="[0-9]{10}" placeholder="1234567890" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="DOB" required>
+
+    <div class="full-width">
+      <button type="submit">Register Employee</button>
+    </div>
+  </form>
+
+</body>
+</html>
+
