@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Voting System</title>
+ 
+  <style>
+    body {
+      height: 100%;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input {
+      margin-top: 10px;
+      width: 300px;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Vote for your Candidate</h1>
+
+  <form method="POST" action="/vote">
+    <!-- <input type="text" name="enrollment" placeholder="Enter your Enrollment Number" required /><br><br> -->
+
+    <label><input type="radio" name="candidate" value="SHREYA" required >SHREYA</label><br>
+    <label><input type="radio" name="candidate" value="ALFIZA" /> ALFIZA</label><br>
+    <label><input type="radio" name="candidate" value="SHREEOM" /> SHREEOM</label><br>
+
+    <button type="submit" onclick="checkvote()">Vote</button>
+  </form>
+
+  <script>
+    
+    window.onload = function () {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('voted') === '1') {
+        alert("Vote submitted successfully!");
+      } else if (params.get('voted') === '2') {
+        alert("You have already voted with this enrollment number.");
+      }
+    };
+
+  </script>
+</body>
+</html>

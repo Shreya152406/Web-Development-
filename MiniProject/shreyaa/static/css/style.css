@@ -1,0 +1,20 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.left {
+  /* background-image: url("static/images/logo.jpeg"); */
+  height: 100%;
+  width: 50%;
+
+}
+.left img{    height: 150px;
+    width: 1000px;
+}
+
+.right {
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+}
