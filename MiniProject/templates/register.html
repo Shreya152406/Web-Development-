@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Online Voting System</title>
+
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .main {
+      background-color: black;
+      height: 100vh;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loader {
+      width: 100vw;
+      height: 100vh;
+      z-index: 99;
+      background-color: black;
+      color: gray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      position: fixed;
+    }
+
+    .loader h1 {
+      font-size: 100px;
+    }
+
+    .box {
+      height: 85%;
+      width: 28%;
+      background-color: black;
+      margin: 40px;
+      border-radius: 25px;
+      color: white;
+      padding: 30px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .box #profile {
+      height: 200px;
+      width: 200px;
+      position: absolute;
+    }
+
+    .box p {
+      text-align: justify;
+      color: rgb(149, 149, 149);
+      line-height: 23px;
+      opacity: 0;
+    }
+
+    .box:hover #profile {
+      top: 25px;
+    }
+
+    .box h2 {
+      margin-top: 200px;
+      margin-bottom: 20px;
+      opacity: 0;
+    }
+
+    .box h4 {
+      margin-top: 25px;
+      margin-bottom: 10px;
+      align-self: flex-start;
+      opacity: 0;
+
+    }
+
+    .box ul {
+      align-self: flex-start;
+      line-height: 23px;
+      opacity: 0;
+    }
+
+    .box #connect {
+      display: flex;
+      align-items: center;
+      align-self: flex-start;
+      margin-top: 10px;
+      opacity: 0;
+    }
+
+    .box button {
+      width: 100%;
+      padding: 25px 160px;
+      height: 50px;
+      background: linear-gradient(to right, #071018, #0b1d2c, #184a76);
+      font-size: 20px;
+      border: none;
+      color: gray;
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box button:hover {
+      background: linear-gradient(to right, #184a76, white);
+      color: black;
+      transition: all ease-in 2s;
+    }
+
+    .box:hover {
+      background-color: #060d13;
+      transition: all ease-in 1s;
+    }
+
+    .box:hover h2,
+    .box:hover p,
+    .box:hover h4,
+    .box:hover ul,
+    .box:hover #connect,
+    .box:hover button {
+      opacity: 1;
+      transition: opacity 2s ease;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="loader">
+    <!-- <h1>Choose your candidate wisely...</h1> -->
+    <h1>Think. Decide. Vote responsibly.</h1>
+  </div>
+
+  <div class="main">
+
+    <div class="box">
+      <img src="static/images/shreya.jpeg" alt="" id="profile">
+      <h2>Shreya S. Sunil</h2>
+      <p>I'm a 3rd-year Electronics student, passionate about coding and mentoring. I've led Python and C workshops for
+        juniors.
+        I enjoy simplifying complex topics and want to help juniors feel confident with core coding concepts.</p>
+
+      <h4>Manifesto : </h4>
+      <ul>
+        <li> Conduct regular coding bootcamps 🧑‍🏫</li>
+
+        <li>Begin GitHub club projects 🔧</li>
+
+        <li>Run bi-weekly DSA sessions 💡</li>
+      </ul>
+
+      <p id="connect">Connect : <img src="static/images/linkedin.png" height="40px" width="40px"> </p>
+
+      <form method="POST" action="/vote">
+        <input type="hidden" name="candidate" value="Shreya S. Sunil" />
+        <input type="hidden" name="enrollment" value="{{.Enrollment}}" />
+        <button type="submit">Vote</button>
+      </form>
+      
+    </div>
+
+    <div class="box">
+      <img src="static/images/shree.jpeg" alt="" id="profile">
+      <h2>Shreeom S. Narkar</h2>
+      <p>I'm a 2nd-year CSE student and a competitive programmer, active in online contests and open-source
+        contributions.
+        I believe in building a strong coding culture through consistent practice and real challenges.</p>
+
+      <h4>Manifesto : </h4>
+      <ul>
+        <li>Start monthly coding leaderboard 🏆</li>
+        <li>Host mini hackathons quarterly 🚀</li>
+        <li>Organize peer mentorship 🤝</li>
+      </ul>
+
+      <p id="connect">Connect : <img src="static/images/linkedin.png" height="40px" width="40px"> </p>
+
+      <form method="POST" action="/vote">
+        <input type="hidden" name="candidate" value="Shreeom S. Narkar" />
+        <input type="hidden" name="enrollment" value="{{.Enrollment}}" />
+        <button type="submit">Vote</button>
+      </form>
+      
+    </div>
+
+
+    <div class="box">
+      <img src="static/images/alfiza.jpeg" alt="" id="profile">
+      <h2>Alfiza S. Mujawar</h2>
+      <p>I'm a final-year IT student and full-stack developer, experienced with real-world projects and internships.
+        I aim to bridge the gap between classroom knowledge and industry skills through practical learning.</p>
+
+      <h4>Manifesto : </h4>
+      <ul>
+        <li>Begin AI & cybersecurity tracks 🔐</li>
+        <li>Start project incubator program 🚀</li>
+        <li>Collaborate with other colleges 🤝</li>
+      </ul>
+
+      <p id="connect">Connect : <img src="static/images/linkedin.png" height="40px" width="40px"> </p>
+
+      <form method="POST" action="/vote">
+        <input type="hidden" name="candidate" value="Alfiza S. Mujawar" />
+        <input type="hidden" name="enrollment" value="{{.Enrollment}}" />
+        <button type="submit">Vote</button>
+      </form>
+      
+    </div>
+
+  </div>
+  <script>
+
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="static/js/ani.js"></script>
+
+</body>
+
+</html>
