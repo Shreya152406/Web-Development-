@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Voting System</title>
+
+   <style>
+    *{
+      padding: 0px;
+      margin: 0px;
+    }
+    body{
+      overflow-y: hidden;
+      display: flex;
+    }
+    .left{
+      width: 60%;
+      height: 100vh;
+    }
+    .left img{
+      height: 100vh;
+      width: 100%;
+    }
+    .right{
+      width: 50%;
+      height: 100vh;
+      margin: 100px;
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+
+    .right h1{
+      text-align: center;
+      margin-bottom: 60px;
+      margin-top: 10px;
+    }
+    form{
+      text-align: center;
+    }
+    input{
+      width: 70%;
+      height: 50px;
+      margin: 10px;
+      border: none;
+      border-bottom: 1px solid black;
+      font-size: 16px;
+      
+    }
+
+    #sub{
+      border: none;
+      background-color: #0052ab;
+      color: white;
+      font-size: 15px;
+    }
+   </style>
+</head>
+<body>
+
+<div class="left">
+<img src="static/images/logo.jpeg" alt="" id="Logo"> 
+   
+   
+</div>
+<div class="right">
+  <h1> Student Details</h1>
+
+  <form method="POST" action="/register">
+    <input type="text" name="fullname" placeholder="Full Name" required/>
+    <input type="text" name="enrollment" placeholder="Enrollment" required />
+    <input type="tel" name="contact" placeholder="Contact Number" required/>
+    <input type="text" name="branch" placeholder="Branch" required/>
+    <input type="submit" id="sub" value="Submit" />
+</form>
+
+</div>
+</body>
+</html>
